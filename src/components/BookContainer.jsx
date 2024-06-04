@@ -14,7 +14,6 @@ const BookContainer = () => {
     e.preventDefault();
     const searchQuery = e.target.elements.query.value;
     dispatch(setQuery(searchQuery));
-    console.log(searchQuery);
   };
 
   return (
