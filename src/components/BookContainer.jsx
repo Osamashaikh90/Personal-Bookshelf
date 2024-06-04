@@ -18,7 +18,7 @@ const BookContainer = () => {
   };
 
   return (
-    <div className="xxsm:mx-10 lg:mx-36 mt-5 flex flex-col gap-5">
+    <div className="sm:mx-1 xl:mx-36 lg:mx-20 mt-5 flex flex-col gap-5">
       <div className="cursor-pointer sort-selection flex items-center justify-center">
         <form onSubmit={handleSearch}>
           <label htmlFor="" className="text-2xl font-medium ">
@@ -34,7 +34,7 @@ const BookContainer = () => {
       </div>
       {/* books */}
       {isFetching ? (
-        <div className="grid grid-cols-5 gap-5">
+        <div className="grid xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-3 gap-5">
         {Array(10)
           .fill("")
           .map((e, index) => (
@@ -42,7 +42,7 @@ const BookContainer = () => {
            ))}
         </div>
       ) : (
-        <div className="grid grid-cols-5 gap-x-5 gap-y-10">
+        <div className="grid xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10">
           {data?.docs.length > 0 ? (
             data.docs.map((book) => (
               <BookCard key={book.key} book={book} />
